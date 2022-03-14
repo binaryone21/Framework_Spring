@@ -4,6 +4,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/seunghee/코드로_배우는_스프링_웹_프로젝트/ex00" />
     <file type="web" url="file://$PROJECT_DIR$/seunghee/코드로_배우는_스프링_웹_프로젝트/ex002" />
+    <file type="web" url="file://$PROJECT_DIR$/seunghee/코드로_배우는_스프링_웹_프로젝트/ex01" />
     <file type="web" url="file://$PROJECT_DIR$/seunghee/코드로_배우는_스프링_웹_프로젝트/jex00" />
     <file type="web" url="file://$PROJECT_DIR$/seunghee/코드로_배우는_스프링_웹_프로젝트/jex002" />
   </component>
@@ -18,6 +19,8 @@
         <option value="$PROJECT_DIR$/seunghee/코드로_배우는_스프링_웹_프로젝트/ex00/pom.xml" />
         <option value="$PROJECT_DIR$/seunghee/스프링4_입문/di-annotation/pom.xml" />
         <option value="$PROJECT_DIR$/seunghee/스프링4_입문/_02_스프링_DI/_03_어노테이션을_이용한_DI/di-annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/seunghee/코드로_배우는_스프링_웹_프로젝트/ex01/pom.xml" />
+        <option value="$PROJECT_DIR$/seunghee/코드로_배우는_스프링_웹_프로젝트/jex01/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

@@ -6,15 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ex00" />
         <module name="jex00" />
         <module name="di-annotation" />
+        <module name="ex01" />
+        <module name="ex00" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ex00" options="-Xlint:all" />
+      <module name="ex01" options="-Xlint:all" />
       <module name="jex00" options="-Xlint:all" />
     </option>
   </component>
