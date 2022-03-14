@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="ex00.war">
+    <root id="archive" name="controller-1.0.0-BUILD-SNAPSHOT.war">
       <element id="artifact" artifact-name="ex00:war exploded" />
     </root>
   </artifact>

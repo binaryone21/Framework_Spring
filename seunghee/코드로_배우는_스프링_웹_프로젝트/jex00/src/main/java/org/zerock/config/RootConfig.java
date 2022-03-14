@@ -11,29 +11,29 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 @Configuration
-@ComponentScan(basePackages = {"org.zerock.sample"})
-@MapperScan(basePackages = {"org.zerock.mapper"})
+@ComponentScan( basePackages = { "org.zerock.sample" })
+@MapperScan( basePackages = { "org.zerock.mapper" })
 public class RootConfig {
-
-	// HikariCP JDBC			
-	@Bean			
-	public DataSource dataSource( ) {
-		HikariConfig hikariConfig = new HikariConfig( );		
-		hikariConfig.setDriverClassName("oracle.jdbc.driver.OracleDriver");		
-		hikariConfig.setJdbcUrl("jdbc:oracle:thin:@toy-oracle.cwkdq9ftbcnp.ap-northeast-2.rds.amazonaws.com:1521:ORACLE");		
-		hikariConfig.setUsername("study_book_ex");		
-		hikariConfig.setPassword("study_book_ex");		
-				
-		HikariDataSource dataSource = new HikariDataSource(hikariConfig);		
-				
-		return dataSource;		
+	// HikariCP JDBC		
+	@Bean		
+	public javax.sql.DataSource dataSource( ) {		
+		HikariConfig hikariConfig = new HikariConfig( );
+		hikariConfig.setDriverClassName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy");	
+		hikariConfig.setJdbcUrl("jdbc:log4jdbc:oracle:thin:@toy-oracle.cwkdq9ftbcnp.ap-northeast-2.rds.amazonaws.com:1521:ORACLE");	
+		hikariConfig.setUsername("study_book_ex");
+		hikariConfig.setPassword("study_book_ex");
+			
+		HikariDataSource dataSource = new HikariDataSource(hikariConfig);	
+			
+		return dataSource;
 	}
 	
 	// MyBatis
-	@Bean	
-	public SqlSessionFactory sqlSessionFactory( ) throws Exception {
+	@Bean
+	public SqlSessionFactory sqlSessionFactory( ) throws Exception {	
 		SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean( );
 		sqlSessionFactory.setDataSource(dataSource( ));
-		return (SqlSessionFactory) sqlSessionFactory.getObject( );
+		return ( SqlSessionFactory ) sqlSessionFactory.getObject( );
 	}	
+	
 }
