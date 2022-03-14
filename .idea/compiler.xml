@@ -9,6 +9,7 @@
         <module name="jex00" />
         <module name="di-annotation" />
         <module name="ex01" />
+        <module name="jex01" />
         <module name="ex00" />
       </profile>
     </annotationProcessing>
@@ -18,6 +19,7 @@
       <module name="ex00" options="-Xlint:all" />
       <module name="ex01" options="-Xlint:all" />
       <module name="jex00" options="-Xlint:all" />
+      <module name="jex01" options="-Xlint:all" />
     </option>
   </component>
 </project>
