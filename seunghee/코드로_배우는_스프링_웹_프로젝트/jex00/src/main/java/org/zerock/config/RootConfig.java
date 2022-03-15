@@ -3,25 +3,43 @@ package org.zerock.config;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @ComponentScan( basePackages = { "org.zerock.sample" })
 @MapperScan( basePackages = { "org.zerock.mapper" })
+@PropertySource("classpath:jdbc.properties")
 public class RootConfig {
-	// HikariCP JDBC		
-	@Bean		
-	public javax.sql.DataSource dataSource( ) {		
+
+	@Value("${dcn}")
+	private String dcn;
+
+	@Value("${url}")
+	private String url;
+
+	@Value("${user}")
+	private String user;
+
+	@Value("${pass}")
+	private String pass;
+
+	// HikariCP JDBC
+	@Bean
+	public javax.sql.DataSource dataSource( ) {
+
+
 		HikariConfig hikariConfig = new HikariConfig( );
-		hikariConfig.setDriverClassName("net.sf.log4jdbc.sql.jdbcapi.DriverSpy");	
-		hikariConfig.setJdbcUrl("jdbc:log4jdbc:oracle:thin:@toy-oracle.cwkdq9ftbcnp.ap-northeast-2.rds.amazonaws.com:1521:ORACLE");	
-		hikariConfig.setUsername("study_book_ex");
-		hikariConfig.setPassword("study_book_ex");
+		hikariConfig.setDriverClassName(dcn);
+		hikariConfig.setJdbcUrl(url);
+		hikariConfig.setUsername(user);
+		hikariConfig.setPassword(pass);
 			
 		HikariDataSource dataSource = new HikariDataSource(hikariConfig);	
 			
