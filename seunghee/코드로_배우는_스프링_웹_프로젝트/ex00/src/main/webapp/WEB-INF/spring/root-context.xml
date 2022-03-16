@@ -9,7 +9,7 @@
 		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
 	<!-- JDBC properties 연결 -->
-	<util:properties id="jdbc" location="WEB-INF/spring/jdbc.properties"/>
+	<util:properties id="jdbc" location="file:src/main/webapp/WEB-INF/spring/jdbc.properties"/>
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<context:component-scan base-package="org.zerock.sample"/>

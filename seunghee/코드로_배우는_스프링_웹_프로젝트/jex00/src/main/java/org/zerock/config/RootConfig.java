@@ -15,7 +15,7 @@ import org.springframework.context.annotation.PropertySource;
 @Configuration
 @ComponentScan( basePackages = { "org.zerock.sample" })
 @MapperScan( basePackages = { "org.zerock.mapper" })
-@PropertySource("classpath:jdbc.properties")
+@PropertySource("file:src/main/java/org/zerock/config/jdbc.properties")
 public class RootConfig {
 
 	@Value("${dcn}")
